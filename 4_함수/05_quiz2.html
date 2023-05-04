@@ -1,0 +1,20 @@
+<script>
+    var cm = parseFloat(prompt(`키를 입력해주세요.`))
+    // cm = (Number) cm;
+    var kg = parseFloat(prompt(`몸무게를 입력해주세요.`))
+
+    function CalcBMI (height, weight){
+        var kg = weight;
+        var m = height / 100;
+        var bmi = kg / (m * m);
+        if(bmi >= 25.0){
+            alert(`당신은 과체중입니다. 당신의 bmi :${bmi}`);
+        }else if(bmi <= 18.0){
+            alert(`당신은 저체중입니다. 당신의 bmi :${bmi}`);
+        }else {
+            alert(`당신은 정상체중입니다. 당신의 bmi :${bmi}`);
+        }
+    }
+    CalcBMI(cm, kg);
+   
+</script>
