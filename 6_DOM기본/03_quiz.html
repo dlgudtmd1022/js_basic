@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul id="list1">
+                <li>리스트1</li>
+                <li>리스트2</li>
+                <li>리스트3</li>
+                <li>리스트4</li>
+                <li>리스트5</li>
+                <li>리스트6</li>
+                <li>리스트7</li>
+            </ul>
+        </div>
+
+        <script>
+            // 1. id = "list1"인 요소의 자식인 <li>요소중
+            // 홀수번째 요소만 선택 후 배경색상 yellow적용
+
+            // let elements = document.querySelectorAll("li:nth-child(odd)");
+            
+            // for(const $li of elements){
+            //     $li.style.background = "yellow";
+            // }
+
+            // let listeven = document.querySelectorAll("li:nth-child(even)");
+
+            // for(const $li of listeven){
+            //     $li.style.background = "gray";
+            // }
+
+            // 3. id="list1"인 요소에 <li>요소 중
+            // 첫번째 li요소만 선택 후 폰트 색상 red적용
+
+            let listfirst = document.querySelectorAll("li:nth-child(1)");
+            
+            for(const $li of listfirst){
+                $li.style.color = "red";
+            }
+
+            elements= document.querySelectorAll("li");
+            const $lastLi = elements[elements.length -1];
+                $lastLi.style.color = "green";
+            
+            elemets = document.querySelector("li");
+            const[$fir, $sec, $thi, ...others] = elements;
+            for($li of others){
+                $li.style.border = '2px dashed violet';
+            }
+            
+        </script>
+    </body>
+</html>
