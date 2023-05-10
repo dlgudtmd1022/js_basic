@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+    </head>
+    <body>
+        <button id="btn">클릭해주세요.</button>
+
+        <script>
+             const $btn = document.getElementById('btn');          
+            // 안녕 이라는 alert창을 띄우는 핸들러 함수
+            // 기명 함수
+            const hello = () => alert('안녕!');        
+            $btn.addEventListener('click', hello);
+           // 익명 함수
+            $btn.addEventListener('click', function(){
+                $btn.style.background = 'red';
+            });
+
+            $btn.addEventListener('mouseover',function(){
+                $btn.style.color = 'blue';
+            });
+
+            $btn.addEventListener('mouseout',function(){
+                $btn.style.color = 'white';
+            });
+
+            // 익명함수는 제거가 안되지만 기명함수는 제거 가능
+            $btn.removeEventListener('click', hello);
+        </script>
+    </body>
+</html>

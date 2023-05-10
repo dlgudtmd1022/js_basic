@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            .hide{
+                display : none;
+            }           
+        </style>
+    </head>
+    <body>
+        <button id='hideButton'>텍스트를 숨기는 버튼!</button>
+
+        <div class="text">안녕하세요</div>
+
+        <script>
+            // 버튼을 클릭하면 div태그가 숨겨지도록 이벤트 헨들러 구현
+            // hint : class속성에 hide가 추가되면 숨겨지고 사라지면 드러납니다.
+            $button = document.getElementById('hideButton');
+            $text = document.querySelector('.text');
+            
+            // $button.addEventListener('click', function(){
+            //     $text.classList.toggle('hide');
+            // });
+
+            // const hideText = () => {
+            //     $text.classList.toggle('hide');
+            // }
+            // $button.onclick = hideText;
+
+            $button.onclick = () => {
+                $text.classList.toggle('hide');
+            }
+            
+        </script>
+    </body>
+</html>
