@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body>
+   <ul>
+      <li>영진위 API에서 일일 박스오피스 2023/05/05 정보를 얻어와서 
+         콘솔에 찍어주는 함수 getBoxOffice() 를 선언해주세요.</li>
+      <li>버튼을 만들고 onclick 이벤트로 해당 함수를 연결해주세요.</li>
+      <li>비동기식으로 요청이 들어가는지 체크해주세요.</li>
+   </ul>
+
+   <button id="getBoxOffice">2023/05/05</button>
+
+   <script src="fetchmovie.js"></script> <!--외부 js파일 임포트-->
+   <script>
+       
+       let $button = document.getElementById("getBoxOffice");
+
+       $button.addEventListener("click", boxOffice);
+   </script>
+</body>
+</html>
